@@ -19,9 +19,8 @@
 - [Table of Contents](#table-of-contents)
 - [About The Project:](#about-the-project)
   - [Built With:](#built-with)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
+- [Prerequisites](#prerequisites)
+- [Compiling](#compiling)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -42,38 +41,40 @@ SimpleSync is a graphical user interface for [rsync](https://rsync.samba.org) wi
 ### Built With:
 * [Qt](https://www.qt.io)
 
+## Prerequisites
 
+Firstly, install [rsync](https://rsync.samba.org) packages:
 
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+* for macOS
 ```sh
-npm install npm@latest -g
+brew install rsync
+```
+* for Linux
+```sh
+sudo apt-get install rsync
 ```
 
-### Installation
+## Compiling
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Install Qt Creator from https://www.qt.io.
+2. Clone the repo:
 ```sh
-git clone https:://github.com/your_username_/Project-Name.git
+git clone https://github.com/Vesa95/SimpleSync.git
 ```
-3. Install NPM packages
+3. Open SimpleSync.pro file with QtCreator.
+4. If a window with the message "No Valid Settings Found" appear, hit OK.
+5. Select your compiler, and hit "Configure Project".
+6. From left side of Qt window, select "Release" and hit build.
+7. Now, the program is compile, you can find the .exe in the same folder, where you clones the repo. 
+   
+   Example:
 ```sh
-npm install
+-──\home\user\
+  │
+  ├── SimpleSync                                      
+  └── build-SimpleSync-Desktop_Qt_5_9_6_GCC_64bit-Release 
 ```
-4. Enter your API in `config.js`
-```JS
-const API_KEY = 'ENTER YOUR API';
-```
+
 
 
 
