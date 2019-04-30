@@ -65,14 +65,14 @@ git clone https://github.com/Vesa95/SimpleSync.git
 4. If a window with the message "No Valid Settings Found" appear, hit OK.
 5. Select your compiler, and hit "Configure Project".
 6. From left side of Qt window, select "Release" and hit build.
-7. Now, the program is compile, you can find the .exe in the same folder, where you clones the repo. 
+7. Now, the program is compiled, you can find the .exe in the same folder, where you cloned the repo. 
    
    Example:
 ```sh
--──\home\user\
+\home\user\
   │
-  ├── SimpleSync                                      
-  └── build-SimpleSync-Desktop_Qt_5_9_6_GCC_64bit-Release 
+  ├── SimpleSync                                            <--- REPO CLONE                         
+  └── build-SimpleSync-Desktop_Qt_5_9_6_GCC_64bit-Release   <--- RELEASE FOLDER (.exe)
 ```
 
 
