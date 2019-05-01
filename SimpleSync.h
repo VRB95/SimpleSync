@@ -19,6 +19,7 @@ class SimpleSync : public QMainWindow
 public:
     explicit SimpleSync(QWidget *parent = nullptr);
     ~SimpleSync();
+    QString logCommand;
     QString logFilePath;
     bool isRemoteSync_On = false;
     QString command;

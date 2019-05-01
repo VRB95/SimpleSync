@@ -6,8 +6,8 @@ SimpleSync::SimpleSync(QWidget *parent) :
     ui(new Ui::SimpleSync)
 {
     ui->setupUi(this);
-    ui->logPath->setPlaceholderText("/Users/bogdanvesa/Projects/logs/SimpleSync-backup-log");
     ui->console->moveCursor(QTextCursor::End);
+    on_logFile_checkBox_stateChanged(2);
 
 }
 
@@ -57,10 +57,10 @@ void SimpleSync::on_synchronize_btn_clicked()
     hostIP = ui->ip_line->text();
 
     if (isRemoteSync_On == false){
-    command = "rsync -arz  -P -i --stats -h " + dir1 + " " + dir2 + logFilePath;
+    command = "rsync -arz  -P -i --stats -h " + dir1 + " " + dir2 + logCommand;
     }
     else if (isRemoteSync_On == true) {
-    command = "rsync -a " + username + "@" + hostIP + ":" + dir1 + " " + dir2 + logFilePath;
+    command = "rsync -a " + username + "@" + hostIP + ":" + dir1 + " " + dir2 + logCommand;
     }
     printC("Command: " + command);
 
@@ -78,12 +78,16 @@ void SimpleSync::on_synchronize_btn_clicked()
 void SimpleSync::on_logFile_checkBox_stateChanged(int arg1)
 {
     if (arg1 == 2){
-        logFilePath = " --log-file=/Users/bogdanvesa/Projects/logs/SimpleSync-backup-log-$(date +\"%Y-%m-%d\").log | grep -E '^[^.]|^$'";
-        ui->logPath->setText("/Users/bogdanvesa/Projects/logs/SimpleSync-backup-log");
-        printC("Log file path: " + logFilePath);
+        logFilePath = QDir::homePath() + "/SimpleSync-logs";
+        QDir dir(logFilePath);
+        if (!dir.exists())
+            dir.mkpath(".");
+        logCommand = " --log-file=" + logFilePath + "/SimpleSync-logs-$(date +\"%Y-%m-%d\").log | grep -E '^[^.]|^$'";
+        ui->logPath->setText(logFilePath);
+        printC("Log file path: " + logCommand);
     }
     else {
-        logFilePath = "";
+        logCommand = "";
         printC("No log data");
     }
 }
