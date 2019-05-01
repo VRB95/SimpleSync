@@ -22,6 +22,9 @@
 - [Prerequisites](#prerequisites)
 - [Compiling](#compiling)
 - [Usage](#usage)
+    - [Local Sync:](#local-sync)
+    - [Remote Sync:](#remote-sync)
+    - [Example:](#example)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
@@ -63,7 +66,7 @@ git clone https://github.com/Vesa95/SimpleSync.git
 3. Open SimpleSync.pro file with QtCreator.
 4. If a window with the message "No Valid Settings Found" appear, hit OK.
 5. Select your compiler, and hit "Configure Project".
-6. From left side of Qt window, select "Release" and hit build.
+6. From left side of Qt window, select "Release" and hit "Build".
 7. Now, the program is compiled, you can find the .exe in the same folder, where you cloned the repo. 
    
    Example:
@@ -80,9 +83,42 @@ git clone https://github.com/Vesa95/SimpleSync.git
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+SimpleSync can be use to synchronize local directory, or remote directory (or synchronize an external HDD with a samba server, exactly why I used it).
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+This user guide is split in two: 1 - Local Sync and 2 - Remote Sync.
+
+#### Local Sync: 
+   
+1.  Choose the folder with the files you want to transfer (sync) "Origin Folder: " <b>Attention: The contain of origin folder will be copied (sync), not the folder!</b>
+2.  Choose the destination folder "Sync Folder: "
+3.  By default, log file is check, if you don't want to make a log file, uncheck it. The path of log files folder is "\home\user\SimpleSync-logs\"
+4. Hit Synchronize and wait to appear "DONE" on console widget.
+5.  Now, the files from origin folder, will be also in sync folder, if you make changes on a file from origin folder, and synchronize them one more time, only the files that was changed will be transfered in sync folder.
+
+#### Remote Sync:
+
+   1. For this, will need to be done a few more setting, I highly recommend to use <b>Digital Ocean</b> ssh tutorial: [How To Configure SSH Key-Based Authentication on a Linux Server.](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server)
+   2.  After you have done, all the steps from tutorial, you wil need one more sheel line to disable ssh for asking you passphrase every time you want to connect to server. 
+  ```sh
+  ssh-add -K ~/.ssh/id_rsa
+  ```
+   3. This is needed only if you enter a passphrase at the step 4 from tutorial, but I highly recommend to leave passphrase empty:
+   ```sh
+  # Step 4 from tutorial:
+
+  Created directory '/home/username/.ssh'.
+  Enter passphrase (empty for no passphrase):  <-- LEAVE EMPTY!
+  Enter same passphrase again: 
+  ```
+  4. All ssh setting are done! Congrats!
+  5. Now, on SimpleSync press in "Remote Setting" tab, check Remote Sync, and enter the Username and IP adress that you used to connect to server with ssh.
+  <p align="center">
+    <img src="img\screensh_2.png" alt="screenshot_1">
+  </p>
+  6. Go back on "Sync" tab, choose the exact path of your folder from server, your destination folder on pc or external hdd and hit Synchronize.
+  
+#### Example:
+  For example I want to synchronize my photos folder from my backup server with my local folder. On my backup server, photos are in \mnt\SambaServer\Media\Photos\ <- this is the path for Origin Folder, and my local folder is \home\user\Photos <- this is the path for Sync Folder.
 
 
 
