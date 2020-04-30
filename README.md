@@ -15,6 +15,10 @@
 
 SimpleSync is a graphical user interface for [rsync](https://rsync.samba.org) wich is a utility for efficiently transferring and synchronizing files between a computer and an external hard drive and across networked computers by comparing the modification times and sizes of files.
 
+<p align="center">
+  <img src="img\screensh_1.png" alt="screenshot_1">
+</p>
+
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
@@ -30,17 +34,7 @@ SimpleSync is a graphical user interface for [rsync](https://rsync.samba.org) wi
 - [Contact](#contact)
 
 
-
-<!-- ABOUT THE PROJECT -->
-## About The Project:
-
-<p align="center">
-  <img src="img\screensh_1.png" alt="screenshot_1">
-</p>
-
-SimpleSync is a graphical user interface for [rsync](https://rsync.samba.org) wich is a utility for efficiently transferring and synchronizing files between a computer and an external hard drive and across networked computers by comparing the modification times and sizes of files.
-
-### Built With:
+## Built With:
 * [Qt](https://www.qt.io)
 
 ## Prerequisites
