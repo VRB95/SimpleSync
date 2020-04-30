@@ -11,7 +11,7 @@
 
 ## SimpleSync
 
-[![HitCount](http://hits.dwyl.com/VRB95/VRB95/SimpleSync.svg)](http://hits.dwyl.com/VRB95/VRB95/SimpleSync) https://img.shields.io/github/license/VRB95/SimpleSync?style=flat-square
+[![HitCount](http://hits.dwyl.com/VRB95/VRB95/SimpleSync.svg)](http://hits.dwyl.com/VRB95/VRB95/SimpleSync) [![License: MIT](https://img.shields.io/github/license/VRB95/SimpleSync?style=flat-square)](https://opensource.org/licenses/MIT)
 SimpleSync is a graphical user interface for [rsync](https://rsync.samba.org) wich is a utility for efficiently transferring and synchronizing files between a computer and an external hard drive and across networked computers by comparing the modification times and sizes of files.
 
 <p align="center">
