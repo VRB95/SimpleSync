@@ -9,16 +9,16 @@
     <b>Simple</b> user interface for <b>Simple</b> synchronize
 </p>
 
+## SimpleSync
 
+[![HitCount](http://hits.dwyl.com/VRB95/VRB95/SimpleSync.svg)](http://hits.dwyl.com/VRB95/VRB95/SimpleSync)
 
+SimpleSync is a graphical user interface for [rsync](https://rsync.samba.org) wich is a utility for efficiently transferring and synchronizing files between a computer and an external hard drive and across networked computers by comparing the modification times and sizes of files.
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-
-- [Table of Contents](#table-of-contents)
-- [About The Project:](#about-the-project)
-  - [Built With:](#built-with)
+- [Built With:](#built-with)
 - [Prerequisites](#prerequisites)
 - [Compiling](#compiling)
 - [Usage](#usage)
